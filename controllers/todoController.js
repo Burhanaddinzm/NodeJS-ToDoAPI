@@ -32,7 +32,6 @@ async function createTodo(req, res, next) {
 async function updateTodo(req, res, next) {
   const { id } = req.params;
   const { title, completed } = req.body;
-
   try {
     const updatedTodo = await todoService.updateTodo(parseInt(id), {
       title,

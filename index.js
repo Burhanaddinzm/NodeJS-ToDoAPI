@@ -33,6 +33,6 @@ app.use(
 
 app.use("/todos", todoRoutes);
 app.use(errorHandlingMiddleware);
-
 app.all("*", (req, res) => res.sendStatus(404));
+
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
